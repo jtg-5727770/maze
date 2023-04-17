@@ -125,7 +125,10 @@ int main(void)
             printf("(%d,%d) ->", here.r, here.c);
             here = pop(&s);
             printf("(%d,%d)\n", here.r, here.c);
-            if (s.top > 0 && here.r == s.data[s.top - 1].r && here.c == s.data[s.top - 1].c) {
+            if ((maze[r - 1][c] == '.' || maze[r - 1][c] == '1')
+                && (maze[r + 1][c] == '.' || maze[r + 1][c] == '1')
+                && (maze[r][c - 1] == '.' || maze[r][c - 1] == '1')
+                && (maze[r][c + 1] == '.' || maze[r][c + 1] == '1')) {
                 count++;
             }
             i++;
