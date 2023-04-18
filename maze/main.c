@@ -104,8 +104,7 @@ int main(void)
 {
     int r, c;
     int count = 0;
-    StackType s;
-    init_stack(&s);
+ 
     int i = 1;
     while (maze[here.r][here.c] != 'x') {
         printf("-------------\n%d번째 이동\n", i);
